@@ -1,0 +1,74 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: lightgreen;
+}
+
+.nav {
+    background-color: rgb(37, 22, 0);
+    padding: 10px;
+}
+
+.logo, .collapsible {
+    display: inline-block !important;
+    position: relative;
+}
+
+.collapsible {
+    float: right;
+}
+
+.logo a, .collapsible a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 28px;
+    margin: 10px;
+}
+
+.logo a:hover, .collapsible a:hover {
+    color: rgb(255, 0, 0);
+} 
+
+.collapsible #btn div {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.collapsible #btn {
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .collapsible {
+        position: relative;
+    }
+
+    .collapsible .nav-items a {
+        display: block;
+    }
+
+    .nav-items {
+        width: 100%;
+        position: fixed;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        padding-top: 15%;
+        padding-left: 10px;
+        background: rgb(37, 22, 0);
+        transition: all 200ms ease-in-out;
+    }
+
+    .collapsible #btn {
+        float: right;
+        display: inline;
+    }
+
+    .hidden-mobile {
+        top: -100%
+    }
+}
